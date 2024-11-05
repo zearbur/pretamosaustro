@@ -1,0 +1,33 @@
+@font-face { font-family: 'BancoAustro'; src: url('BancoAustro.eot?imdap4'); src: url('BancoAustro.eot?#iefiximdap4') format('embedded-opentype'), url('BancoAustro.ttf?imdap4') format('truetype'), url('BancoAustro.woff?imdap4') format('woff'), url('BancoAustro.svg?imdap4#BancoAustro') format('svg'); font-weight: normal; font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] { font-family: 'BancoAustro'; font-size: 14px; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon-BancaVirtual:before { content: "\e601"; }
+.icon-BancaPersonas:before { content: "\e602"; }
+.icon-BancaEmpresas:before { content: "\e603"; }
+.icon-Cuentas:before { content: "\e604"; }
+.icon-Creditos:before { content: "\e605"; }
+.icon-Inversiones:before { content: "\e606"; }
+.icon-AustroGiros:before { content: "\e607"; }
+.icon-BeneficiosTarjetas:before { content: "\e608"; }
+.icon-Promociones:before { content: "\e609"; }
+.icon-CanalesElectronicos:before { content: "\e600"; }
+.icon-BancoAustro:before { content: "\e60a"; }
+.icon-Twitter:before { content: "\e60c"; }
+.icon-LinkedIn:before { content: "\e60d"; }
+.icon-Youtube:before { content: "\e60e"; }
+.icon-Instagram:before { content: "\e60f"; }
+.icon-Search:before { content: "\e610"; }
+
+.icon-Phone:before { content: "\e611"; }
+.icon-Exterior:before { content: "\e612"; }
+.icon-Account:before { content: "\e614"; }
+.icon-Austrobox:before { content: "\e615"; }
+.icon-Efectivo:before { content: "\e616"; }
+.icon-PC:before { content: "\e613"; }
+.icon-Pos:before { content: "\e617"; }
+.icon-Actualizacion:before { content: "\e618"; }
+.icon-Seguridad:before { content: "\e619"; }
+.icon-Descargas:before { content: "\e61a"; }
+.icon-Facebook:before { content: "\e60b"; }
+.icon-Credito:before { content: "\e900"; }

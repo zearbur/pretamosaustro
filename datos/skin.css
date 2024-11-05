@@ -1,0 +1,273 @@
+/* GENERIC STYLES */
+body { font-family: 'Assistant'; font-size: 16px; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Assistant'; font-weight: normal; }
+h1 { font-size: 26px; line-height: 28px; font-weight: bold; color: #1C256A; }
+h2 { font-size: 22px; line-height: 24px; color: #1C256A; font-weight: bold; }
+h3 { font-size: 18px; line-height: 20px; }
+h4 { font-size: 14px; line-height: 16px; }
+
+ul { list-style-image: url(Images/ListIcon.png);}
+
+.sc-content-block-menu.sc-content-block-quick-insert { display: none !important; visibility: hidden !important; }
+
+.primary-button { background: #1C256A; font-family: 'Assistant'; font-size: 14px; color: #1C256A; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none; border: none; font-weight: bold; -webkit-appearance: none; text-align: center; border: 0; min-width: 120px; text-transform: uppercase; }
+  .primary-button:hover { background: rgba(28,37,106,0.8); }
+  .primary-button:disabled,
+  .primary-button[disabled] { opacity: 0.4; }
+  .primary-button:active { background: none; background-color: rgba(28,37,106,0.8); }
+
+.secondary-button { font-family: 'Assistant'; font-size: 14px; color: #1C256A; background-color: #d8000b; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none; font-weight: bold; -webkit-appearance: none; text-align: center; min-width: 120px; text-transform: uppercase; }
+  .secondary-button:hover { background-color: rgba(216,0,11,0.8); }
+  .secondary-button:disabled,
+  .secondary-button[disabled] { opacity: 0.4; }
+  .secondary-button:active { background-color: rgba(216,0,11,0.8); }
+
+.alternate-button { font-family: 'Assistant'; font-size: 14px; color: #1C256A !important; background-color: #F1B634; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; -webkit-appearance: none; min-width: 120px; text-align: center; text-transform: uppercase; }
+  .alternate-button:hover { background-color: rgba(241,182,52,0.8); }
+  .alternate-button:disabled,
+  .alternate-button[disabled] { opacity: 0.4; }
+  .alternate-button:active { background-color: rgba(241,182,52,0.8); }
+
+.FontUnivers { font-family: 'Assistant'; }
+.FullTableContent { display: table; width: 100%; }
+  .FullTableContent > div { display: table-cell; vertical-align: middle; }
+.TableContent { display: table; }
+  .TableContent > div { display: table-cell; vertical-align: middle; }
+.CenteredContent { width: 1170px; margin: 0 auto; }
+
+/*header*/
+/* .Header { background: #06255b; display: block; } */
+.Header { background: #1C2B4D; display: block; }
+  .Header .CenteredContent { background: url(Images/BackgroundHeader.png) no-repeat; padding: 30px 0; background-position-x: right; background-position-y: -70px; background-size: 700px; }
+  .Header .LoginComponent { font-size: 18px; margin-left: auto; margin-right: 0; padding-right: 45px; }
+    .Header .LoginComponent .Title { color: #1C256A; padding-right: 50px; padding-right: 35px; background-size: 30px; text-align: right; }
+    .Header .LoginComponent .Title img { width:120px; }
+    .Header .LoginComponent .Links { padding-left: 80px; }
+      .Header .LoginComponent .Links a { color: #fff; display: block; font-size: 18px; text-decoration: none; transition: all 0.25s ease-in-out 0s; }
+        .Header .LoginComponent .Links a:hover { color: #F1B634; -webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; -ms-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; }
+
+  .Header .Logo { padding-left: 0px; display: table-cell; position: relative; width: 50%; }
+    .Header .Logo img { width: 400px; }
+  .Header .Login { width: 50%; }
+
+  .Header.Tarjetas .Logo img { width: 500px; }
+
+#menu { display: none; }
+
+/* .BreadCrumb { background-color: #06255b; color: #fff; font-size: 16px; padding: 0 20px; } */
+.BreadCrumb { background-color: #1C2B4D; color: #fff; font-size: 16px; padding: 0 20px; }
+  .BreadCrumb > div { padding: 20px 0; color: #F1B634; }
+  .BreadCrumb a.BreadcrumbLink { font-family: 'Assistant';  color: #fff; text-decoration: none }
+    .BreadCrumb a.BreadcrumbLink:hover { text-decoration: none; }
+
+.MenuContainer { background-color: #1C256A; display: block; position: relative; z-index: 2000; }
+  .MenuContainer .Menu { display: table-cell; }
+  .MenuContainer .Search { display: table-cell; }
+    .MenuContainer .Search > span { position: relative; }
+    .MenuContainer .Search .searchInputContainer input { font-family: 'Assistant'; font-size: 16px; padding: 10px 35px 10px 15px; width: 325px; box-sizing: border-box; border: 0; background-color: rgba(255,255,255,0.1); color: #fff; }
+      .MenuContainer .Search .searchInputContainer input::placeholder { color: rgba(255,255,255,0.7); }
+    .MenuContainer .Search .searchInputContainer a { display: none; }
+    .MenuContainer .Search .SkinObject { font-size: 0; text-decoration: none; position: absolute; top: 0; right: 5px;; }
+      .MenuContainer .Search .SkinObject::before { content: "\e610"; font-family: 'Assistant'; font-size: 22px; text-decoration: none; color: #F1B634; }
+.searchInputContainer a.dnnSearchBoxClearText { top: 4px; right: 35px !important; }
+
+.CenteredContent { width: 1170px; margin: 0 auto; }
+
+.GeneralContents > div > div { vertical-align: top; }
+.GeneralContents .CenterPane { padding-bottom: 20px; }
+  .GeneralContents .CenterPane img { max-width: 640px; }
+
+/*DNN FORM AND LIST STYLE*/
+  
+.generic-form .dnnForm { width:500px; }
+.generic-form .dnnForm input[type=text], .generic-form select, .generic-form textarea { box-shadow:none; margin-bottom:5px; max-width: initial; }
+.generic-form .dnnForm .dnnFormItem > .dnnLabel { float: none; width: initial;}
+.generic-form .dnnForm label{ color:#1C256A; display:block; font-weight:bold; margin-bottom:3px; }
+.generic-form .dnnForm .dnnFormRequired { border-left:1px solid #D5D5D5!important;}
+.generic-form .dnnForm .dnnPrimaryAction { background:none; background-color: #1C256A; font-family: 'Assistant'; font-size: 14px; color: #fff; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none; border: none; font-weight: bold; -webkit-appearance: none; text-align: center; min-width: 120px;  text-shadow:none; text-transform: uppercase; }
+.generic-form .dnnForm .dnnPrimaryAction:hover { background-color:  rgba(28,37,106,0.8); }
+.generic-form .dnnForm .dnnPrimaryAction:disabled,
+.generic-form .dnnForm .dnnPrimaryAction[disabled] { opacity: 0.4; }
+.generic-form .dnnForm .dnnPrimaryAction:active { background: none; background-color: rgba(28,37,106,0.8); }
+
+.generic-form .dnnForm .dnnSecondaryAction { font-family: 'Assistant'; font-size: 14px; background-color: #d8000b; color: #FFF; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none; font-weight: bold; -webkit-appearance: none; text-align: center; min-width: 120px; background-image:none; text-shadow:none; border: none; text-transform: uppercase; }
+.generic-form .dnnForm .dnnSecondaryAction:hover { background-color: rgba(216,0,11,0.8); }
+.generic-form .dnnForm .dnnSecondaryAction:disabled,
+.generic-form .dnnForm .dnnSecondaryAction[disabled] { opacity: 0.4; }
+.generic-form .dnnForm .dnnSecondaryAction:active { background-color: rgba(216,0,11,0.8); }
+
+.generic-form .dnnFormMessage.dnnFormValidationSummary { display:none; }
+.generic-form input[type=text].error-control,
+.generic-form select.error-control { border: 1px solid #e84466!important; }
+.generic-form .dnnFormMessage.dnnFormError,
+.dnnFormItem span.dnnFormMessage.dnnFormError { position:relative; top:auto; right: auto; padding:0; margin-bottom: 18px; color:#e84466; background-color: transparent; font-size: 14px; width:100%; box-sizing: border-box }
+.dnnFormItem span.dnnFormMessage.dnnFormError::after { content:none; }  
+
+/*GENERIC FORM STYLES*/
+.generic-form { margin: 0 auto; display: table; }
+  .generic-form .form-row { display: table; }
+  .generic-form .form-column { display: table-cell; }
+  .generic-form .form-item { padding: 20px; width: 310px; box-sizing: border-box; }
+    .generic-form .form-item > label,
+    .generic-form .form-item > .label { display: block; color: #1C256A; font-weight: bold; margin-bottom: 3px; }
+  .generic-form input[type=text],
+  .generic-form select,
+  .generic-form textarea { border: 1px solid #D5D5D5; padding: 10px; font-size: 16px; font-family: 'Assistant'; color: #4A4A50; width: 100%; border-radius: 3px; -webkit-appearance: none; box-sizing: border-box; }
+    .generic-form input[type=text].error-control { border: 1px solid #e84466; }
+  .generic-form .form-validation .error { color: #e84466; box-sizing: border-box; font-size: 14px; }
+  .generic-form select { background: url(Images/ArrowSelect.png) no-repeat 95% center #fff; }
+.generic-form-buttons { text-align: center; padding: 20px; }
+div[id$="ConfidentialPanel"] { font-size: 14px; line-height: 16px; text-align: justify; }
+
+.generic-form.columns .dnnForm{width:100%}
+.generic-form.columns .dnnForm .dnnFormItem{ width:33%; display:inline-block;padding:10px;box-sizing:border-box;vertical-align: top;}
+.generic-form.columns .dnnForm .dnnFormItem input[type="text"], 
+.generic-form.columns .dnnForm .dnnFormItem input[type="password"], 
+.generic-form.columns .dnnForm .dnnFormItem input[type="email"], 
+.generic-form.columns .dnnForm .dnnFormItem input[type="tel"], 
+.generic-form.columns .dnnForm .dnnFormItem select, 
+.generic-form.columns .dnnForm .dnnFormItem textarea{ max-width: initial;}
+
+/*GENERIC TABLE STYLES*/
+.generic-table { border-collapse: collapse; margin-bottom: 18px; }
+  .generic-table th { color: #1C256A; font-size: 18px; }
+  .generic-table tr { border-style: none; border-bottom-style: none; border-bottom: 1px solid #ddd; }
+    .generic-table tr:hover { background-color: #f2f4f7; }
+  .generic-table th,
+  .generic-table td { padding: 5px 20px; }
+
+/*GENERIC PANELS*/
+.confirmation-panel, .error-panel, .warning-panel { padding: 20px 60px; font-size: 14px; background-repeat: no-repeat; background-position: 20px center; background-size: 24px; }
+.confirmation-panel { background-color: #D5EAD5; border: 2px solid #9BCD9A; background-image: url(Images/IcoConfirmed.png); }
+.error-panel { background-color: #FCDFE6; border: 2px solid #F29DB0; background-image: url(Images/IcoError.png); }
+.warning-panel { background-color: #FFF9D6; border: 2px solid #FFE282; background-image: url(Images/IcoWarning.png); }
+
+/*LOGIN STYLES*/
+.dnnLogin .loginContent { padding-top: 30px; }
+  .dnnLogin .loginContent .LoginPanel { margin: 0 auto; padding-right: 0; float: none; }
+    .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnLabel { display: block; color: #1C256A; font-weight: bold; margin-bottom: 3px; text-align: initial; float: none; width: 100%; }
+    .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnFormLabel { width: 100%; }
+    .dnnLogin .loginContent .LoginPanel .dnnFormItem input { border: 1px solid #D5D5D5; padding: 10px; font-size: 16px; font-family: 'Assistant'; color: #4A4A50; width: 100%; border-radius: 3px; -webkit-appearance: none; box-sizing: border-box; }
+    .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnPrimaryAction { background:none; background-color: #1C256A; font-family: 'Assistant'; font-size: 14px; color: #fff; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none; border: none; font-weight: bold; -webkit-appearance: none; text-align: center;  min-width: 120px; text-shadow: none; text-transform: uppercase; }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnPrimaryAction:hover { background-color:  rgba(28,37,106,0.8); }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnPrimaryAction:disabled,
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnPrimaryAction[disabled] { opacity: 0.4; }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnPrimaryAction:active { background: none; background-color: rgba(28,37,106,0.8); }
+    .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnSecondaryAction { background: none; font-family: 'Assistant'; font-size: 14px; color: #fff; background-color: #d8000b; padding: 10px 30px; border-radius: 3px; display: inline-block; text-decoration: none; box-shadow: none;  font-weight: bold; -webkit-appearance: none; text-align: center; min-width: 120px; text-shadow: none; text-transform: uppercase; }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnSecondaryAction:hover { background-color: rgba(216,0,11,0.8); }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnSecondaryAction:disabled,
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnSecondaryAction[disabled] { opacity: 0.4; }
+      .dnnLogin .loginContent .LoginPanel .dnnFormItem .dnnSecondaryAction:active { background-color: rgba(216,0,11,0.8); }
+
+.BottomPane { background: url(Images/ShadowBottom.png) top center no-repeat; }
+
+.FooterContent { background-color: #EDEEF0; color: #1C256A; }
+.FooterLinks { color: #1C256A; }
+  .FooterLinks > div { width: 33%; vertical-align: top; box-sizing: border-box; }
+    .FooterLinks > div:nth-child(1) { padding: 0 70px 0 0; }
+    .FooterLinks > div:nth-child(2) { padding: 0 35px; }
+    .FooterLinks > div:nth-child(3) { padding: 0 0 0 70px; }
+  .FooterLinks h4 { color: #1C256A; font-size: 18px; border-bottom: 1px solid #BBBDBF; padding-bottom: 8px; margin-bottom: 8px; font-weight: bold; }
+  .FooterLinks .Social i { padding: 10px; }
+  .FooterLinks a, .FooterLinks a:visited { color: #1C256A; text-decoration: none; font-family: 'Assistant'; }
+    .FooterLinks a:hover { text-decoration: underline; }
+
+.Copyright { background-color: #F1B634; text-align: center; padding: 10px 0; font-family: 'Assistant'; font-size: 14px; color: #fff; }
+  .Copyright a { color: #fff; text-decoration: none; }
+
+.CenterPane .Normal a, .CenterPane p a:visited { color: #1C256A; text-decoration: none; }
+  .CenterPane .Normal a:hover { color: #26A9E0; }
+
+a.LinkDescarga, a.LinkDescarga:visited { color: #1C256A; text-decoration: none; }
+  a.LinkDescarga::after { content: "\f0ed" !important; font-family: 'Assistant'; margin-left: 5px; }
+
+ul.searchSkinObjectPreview { display: none; }
+.MenuContainer .Search .searchInputContainer a { top: -2000px; }
+
+  .ImageGallery .Image { float: left; margin-right: 10px; margin-bottom: 10px; }
+
+.MovilMenu { padding: 10px; text-decoration: none; position: absolute; top: 0px; right: 20px; display: none; }
+  .MovilMenu::before { content: "\f0c9"; font-family: 'Assistant'; color: #E6E7EA; font-size: 40px; }
+
+/* Login Sections */
+
+.table-container-login { margin: 0 auto; }
+.table-container-login td { padding: 0 30px; }
+
+.table-login { margin: 20px auto; width: 400px; color: #1C256A; }
+.table-login td { padding:10px; }
+
+.table-info-login { border-spacing: 0; width:100% }
+.table-info-login tr > td:nth-child(1) { background-color:#1f2d5b; }
+.table-info-login tr > td:nth-child(2) { background-color:#254280; }
+.table-info-login tr > td:nth-child(3) { background-color:#3a6daf; }
+.table-info-login td { width:33.33%; color:#fff; vertical-align: top; padding:10px 40px; font-size :14px; box-sizing: border-box; }
+.table-info-login td h3 { color:#fff; font-weight: bold; }
+.table-info-login td ul { list-style-image: initial; }
+
+.Header .CenteredContent.LoginContent { background:none; }
+
+/* Collapsible panels */
+
+.LeftMenu .RootMenu { font-size: 20px; color:#1C256A; padding:10px;  background: url(Images/ArrowSelect.png) no-repeat 95% center #cacaca; cursor: pointer; border-bottom: 1px solid #fff;  }
+.LeftMenu .pane { padding:20px; }
+
+/* Responsive Section */
+
+@media all and (max-width: 1170px) {
+  .CenteredContent { width: 100%; }
+}
+
+@media all and (max-width: 980px) {
+  #menu { display: block; }
+  .MovilMenu { display: block; }
+
+  .MenuContainer { height: 15px; }
+    .MenuContainer .Menu, .MenuContainer .Search { display: none; }
+    .Header .CenteredContent { background-position-y: -148px; padding:20px 0; background-size:600px; } 
+  .Header .Logo { padding-left: 10px; width: 100%; }
+    .Header .Logo img { width: 300px; }
+  .Header .Login { display: none; }
+  .BotonesHome { display: block; width: 100%; text-align: center; }
+    .BotonesHome a { display: inline-block; }
+  .FullTableContent { display: table; }
+    .FullTableContent > div { display: block; }
+  
+    .table-info-login td h3 img { display:block; margin: 10px auto!important; }
+
+  .generic-form.columns .dnnForm .dnnFormItem{width:100%}
+}
+
+@media all and (max-width: 768px) {
+  .Header .CenteredContent { background-image: none; }
+  .Header.Tarjetas .Logo img { width: 400px; }
+
+  /*Form Styles*/
+  .generic-form { margin: 0 auto; display: table; width: 100%; }
+    .generic-form .form-row { display: block; }
+    .generic-form .form-column { display: block; }
+    .generic-form .form-item { width: 100%; padding: 10px; }
+    .generic-form.columns .dnnForm .dnnFormItem{width:100%}
+
+      .table-container-login td { display: block; width: 100%; box-sizing: border-box; }
+
+    .table-info-login td { width:100%; display: block; }
+}
+
+@media all and (max-width: 640px) {
+  .Header .Logo img { width: 250px; }
+  .FooterLinks > div { width: 100%; }
+    .FooterLinks > div:nth-child(1), .FooterLinks > div:nth-child(2), .FooterLinks > div:nth-child(3) { padding: 0; }
+    .Header.Tarjetas .Logo img { width: 350px; }
+    .generic-form .dnnForm { width: 100%;}
+}
+
+@media all and (max-width: 480px) {
+  .Header.Tarjetas .Logo img { width: 250px; }
+  .MovilMenu { top: -7px; right: 10px; }
+    .table-login { width:100%; }
+    .table-login td { width:100%; box-sizing: border-box; text-align: center; display: block;  }
+}
+
+@media all and (max-width: 400px) {
+}

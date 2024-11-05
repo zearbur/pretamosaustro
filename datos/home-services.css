@@ -1,0 +1,39 @@
+﻿section.home-services { width: 1170px; margin: 0 auto; }
+  section.home-services .service { position: relative; }
+    section.home-services .service .image-container { text-align: left; }
+    section.home-services .service:nth-child(even) .image-container { text-align: right; }
+    section.home-services .service .image-container img { width:100% }
+    section.home-services .service .text-container { position: absolute; top: 0; right: 0; width: 50%; height: 100%; }
+    section.home-services .service:nth-child(even) .text-container { top: 0; left: 0; }
+    section.home-services .service .text-container .text { position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%; text-align: right; }
+    section.home-services .service:nth-child(even) .text-container .text { text-align: left;}
+    section.home-services .service .text-container .text img { height:50px; }
+      section.home-services .service .text-container .text h1 { color: #0F265C; display: inline; font-size: 30px; font-weight: normal; padding: 0; line-height: 32px; text-transform: uppercase; position: relative; }
+        
+      section.home-services .service .text-container .text h4 { color: #0F265C; line-height: 22px !important; font-weight: normal; font-size: 20px; margin: 14px 0; }
+      section.home-services .service .text-container .text .button { background-color: #d8000b; color: #fff; text-decoration: none; display: inline-block; font-size: 14px; font-weight: normal; margin: 8px 0; padding: 10px 30px; text-transform: uppercase; border-radius: 3px; }
+
+    section.home-services .service .shadow-container { position: absolute; bottom: 0; left: 0; }
+      section.home-services .service .shadow-container img { width: 100%; opacity: 0.6; }
+
+      @media all and (max-width: 1170px) {
+        section.home-services { width: 100%;  }
+      }
+      
+      @media all and (max-width: 980px) {
+      }
+      
+      @media all and (max-width: 768px) {
+        section.home-services .service .text-container { position: relative; width: 100%; height: initial;}
+        section.home-services .service .text-container .text { position: relative; top: auto; transform: none; left: initial; padding: 30px; text-align: center; }
+        section.home-services .service:nth-child(even) .text-container .text { text-align: center;}
+      }
+      
+      @media all and (max-width: 640px) {
+      }
+      
+      @media all and (max-width: 480px) {
+      }
+      
+      @media all and (max-width: 400px) {
+      }

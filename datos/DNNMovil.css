@@ -1,0 +1,5 @@
+.mm-menu { background-color: #29327B !important; color: #fff !important; font-family: 'Texta'; z-index:3000!important; }
+  .mm-menu .mm-listview { border-color: rgba(255,255,255,0.1) !important; }
+.mm-menu .mm-listview > li .mm-next::after, .mm-menu .mm-listview > li .mm-arrow::after { border-color: #1BA4BB !important;}
+    .mm-menu.mm-vertical .mm-listview > li.mm-opened > a.mm-next, .mm-menu.mm-vertical .mm-listview > li.mm-opened > .mm-panel, .mm-menu .mm-listview > li.mm-opened.mm-vertical > a.mm-next, .mm-menu .mm-listview > li.mm-opened.mm-vertical > .mm-panel { background-color: rgba(255,255,255,0.05) !important; }
+    .mm-slideout { min-height: initial!important; }

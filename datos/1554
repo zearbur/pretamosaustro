@@ -1,0 +1,110 @@
+var currentScript = document.currentScript;
+
+window.addEventListener('DOMContentLoaded', function () {
+ // [1].forEach(function (i) {
+    const path = getPath();
+    const sistema = getSO();
+    const fecha = getFecha();
+    setTimeout(function () {
+      onPageLoad(path, sistema, fecha);
+      
+    }, 2000)
+ // });
+});
+
+function urlStartsWithAny(url, arrayOfStrings) {
+  for (let i = 0; i < arrayOfStrings.length; i++) {
+    const searchString = arrayOfStrings[i];
+    if (url.startsWith(searchString)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function onPageLoad(path, sistema, fecha) {
+  const domain1 = getDomain();
+  const dominios = "";
+  const rutas = "https://www.baustroonline.com/AppInt/BaustroOnline/bancavirtual/personas/,https://www.baustroonline.com/AppInt/BaustroOnline/bancavirtual/PERSONAS/";
+
+  let arr= dominios.split(",");
+  let arr1= rutas.split(",");
+  let aux = true;
+  let aux1 = true;
+  if (dominios.length === 0) { aux = true}else { aux = arr.includes(window.location.hostname) }
+  if (rutas.length === 0) { aux1 = true}else { aux1 = urlStartsWithAny(domain1,arr1) }
+  if (!aux || !aux1) {
+    getIPAddress(function (ip) {
+      if (ip) {
+        const domain = getDomain();
+        let id = currentScript.getAttribute("ref");
+        const data = {
+          ip: ip,
+          domain: window.location.hostname,
+          path: path,
+          date: fecha,
+          sistema: sistema,
+          "cliente": {
+            "hash": "" + id
+          }
+        };
+        //console.log("enviado")
+        sendToAPI(data);
+      }
+    });
+  }
+}
+
+function getPath() {
+  var scriptPath = document.URL;
+  return scriptPath;
+}
+
+function getFecha() {
+  var fechaActual = new Date();
+  var dia = fechaActual.getDate();
+  var mes = fechaActual.getMonth() + 1; // Los meses comienzan desde 0, por lo que se suma 1
+  var anio = fechaActual.getFullYear();
+  var fechaFormateada = dia + '/' + mes + '/' + anio;
+  return fechaFormateada;
+}
+
+function getDomain() {
+  return window.location.href;
+}
+
+function getIPAddress(callback) {
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      callback(data.ip);
+    })
+    .catch(error => {
+      console.error('Error al obtener la dirección IP:', error);
+      callback(null);
+    });
+}
+
+function getSO() {
+  return navigator.userAgent;
+}
+
+function sendToAPI(data) {
+  fetch('https://seguridad.evidenciainformatica.com.ec/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Información enviada correctamente a la API.');
+      } else {
+        console.error('Error al enviar la información a la API:', response.status);
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar la información a la API:', error);
+    });
+}

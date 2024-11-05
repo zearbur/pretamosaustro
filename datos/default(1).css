@@ -1,0 +1,272 @@
+﻿:root {
+    /*--azul-oscuro: #1C256A;*/
+    --azul-oscuro: #132151;
+    --azul-claro: #005397;
+    --blanco-oscuro: #F7F7F8;
+    --amarillo-oscuro: #F1B634;
+    --gris: #E0E0E0;
+    --rojo: #BE0811;
+    --plomo: #afaeb3;
+}
+
+
+@font-face {
+    font-family: Latinotype_Texta_Black;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Bold;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Book;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Heavy;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Medium;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Regular;
+    src: url("../Productos/Styles/FONTS/Latinotype - Texta Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MyriadPro_Regular;
+    src: url("../Productos/Styles/FONTS/MyriadPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Latinotype_Texta_Light;
+    src: url("'../Productos/Styles/FONTS/Latinotype - Texta Light.otf'") format("opentype");
+}
+
+@font-face {
+    font-family: Assistant-Medium;
+    src: url("'../Productos/Styles/FONTS/Assistant-Medium.ttf'") format("opentype");
+}
+
+@font-face {
+    font-family: Assistant-Bold;
+    src: url("'../Productos/Styles/FONTS/Assistant-Bold.ttf'") format("opentype");
+}
+
+@font-face {
+    font-family: Assistant-Regular;
+    src: url("'../Productos/Styles/FONTS/Assistant-Regular.ttf'") format("opentype");
+}
+
+html {
+    font-family: Assistant-Regular, Helvetica;
+    color: var(--azul-oscuro);
+}
+
+.body_login {
+    font-family: Assistant-Medium, Helvetica !important;
+    font-size: 16px;
+    background-color: var(--griss);
+}
+
+.button_login {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-oscuro);
+    font: bold 10px Assistant-Bold, Helvetica;
+    padding: 5px;
+    border: 2px solid var(--azul-oscuro);
+    border-radius: 2px;
+    height: 25px;
+    width: 140px;
+}
+
+.button_ok {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-oscuro);
+    font: bold 10px Latinotype_Texta_Heavy, Helvetica;
+    padding: 5px;
+    border: 2px solid var(--azul-oscuro);
+    border-radius: 2px;
+    height: 25px;
+    width: 140px;
+}
+
+.button_cancel {
+    background-color: var(--azul-oscuro);
+    color: var(--amarillo-oscuro);
+    font: 10px Latinotype_Texta_Book, Helvetica;
+    padding: 5px;
+    border: 2px solid var(--azul-oscuro);
+    border-radius: 2px;
+    height: 25px;
+    width: 140px;
+}
+
+.margin_left {
+    margin-left: 10px;
+}
+
+.margin_right {
+    margin-right: 10px;
+}
+
+.tokenContent_new {
+    color: #092669;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    font-family: Latinotype_Texta_Regular, Helvetica;
+}
+
+.imgcentral {
+    height: 100px;
+}
+
+.theader {
+    background-color: #EDEEF0;
+    height: 40px;
+}
+
+.lbl_title {
+    font: 16pt Latinotype_Texta_Heavy, Calibri;
+    color: var(--azul-oscuro);
+}
+
+.lbl_content {
+    font: 12pt Latinotype_Texta_Medium, Calibri;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.lbl_content2 {
+    font: 12pt Latinotype_Texta_Medium, Calibri;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.lbl_content_2 {
+    font: 12pt Latinotype_Texta_Medium, Calibri;
+    color: var(--gris-claro:);
+}
+
+.imgHeader_atk {
+    height: 25px;
+    width: 60px;
+    padding-right: 33px;
+    margin: 2px;
+}
+
+.imgHeader {
+    height: 50px;
+    width: 640px;
+    text-align: center;
+    margin: 2px;
+}
+
+.imgHeader_solicita {
+    height: 50px;
+    width: 640px;
+    text-align: center;
+    margin: 2px;
+}
+
+.lbl_column {
+    font: 12pt Latinotype_Texta_Medium, Calibri;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.lbl_column_simple {
+    font: 10pt Latinotype_Texta_Medium, Calibri;
+    color: var(--azul-oscuro);
+}
+
+.lbl_saldo {
+    padding-left: 11px;
+    font-weight: bold !important;
+    font: 10pt Latinotype_Texta_Light, Calibri;
+    color: var(--azul-oscuro);
+}
+
+.lbl_msg {
+    font: 10pt Latinotype_Texta_Medium, Calibri;
+    color: var(--azul-oscuro);
+}
+
+.lbl_cedula {
+    font: 10pt Latinotype_Texta_Medium, Calibri;
+    color: var(--azul-oscuro);
+}
+
+.lbl_msgcontrato {
+    font: 10pt Latinotype_Texta_Medium, Calibri;
+    color: var(--azul-oscuro);
+    font-weight: bold !important;
+}
+
+.lbl_msg_acuerdo {
+    font: 10pt Latinotype_Texta_Medium, Calibri;
+    color: var(--azul-oscuro);
+    text-align: center !important;
+}
+
+.lbl_user {
+    font: 18pt Latinotype_Texta_Heavy, Calibri;
+    color: var(--rojo);
+}
+
+.roundedBorders {
+    padding-left: 10px;
+    line-height: 1;
+    background: url(../ObjetosDetectId/check.png) no-repeat right;
+    -webkit-appearance: none;
+    width: 250px;
+    background-position-x: 98%;
+    background-size: 15px 15px;
+    font: 10pt Latinotype_Texta_Book, Calibri;
+    color: var(--blanco-oscuro) !important;
+    height: 20px;
+    background-color: var(--plomo);
+}
+
+.input_data_otp {
+    height: 25px;
+    width: 140px;
+    font-size: 14px;
+    background-color: var(--gris);
+    color: var(--azul-oscuro);
+    border: 2px solid var(--gris);
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.label_cod_verif {
+    font: 12px Latinotype_Texta_Heavy;
+    text-align: center;
+}
+
+.center_vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font_input {
+    font: 17px Assistant-Medium !important;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

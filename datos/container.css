@@ -1,0 +1,5 @@
+div.Normal { font-family: 'Texta'; font-size: 16px; color: #4b472b; }
+.ClearPaddingContainer { padding: 20px; }
+.ClearPadding40Container { padding: 40px; }
+.ClearPaddingContentsContainer { padding: 20px 40px 0 40px; }
+.ClearContainer { }

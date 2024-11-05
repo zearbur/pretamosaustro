@@ -1,0 +1,58 @@
+td.clsEtiqueta {
+    vertical-align: middle;
+}
+/*a#LinkNewUserBV {
+    visibility: hidden;
+}*/
+.clsTitulo {
+    color: #666666;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.clsEtiqueta {
+    color: #003473;
+    font-family: Latinotype_Texta_Medium;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.clsEtiqueta2 {
+    color: White;
+    font-family: Latinotype_Texta_Medium;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.clsEtiqueta3 {
+    color: #009FE4;
+    font-family: Latinotype_Texta_Book;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.clsDatos {
+    background-color: White;
+    border: 1px solid #008CC7 !important;
+    /*color: #092669;*/
+    font-family: Latinotype_Texta_Medium;
+    font-size: 12px;
+    vertical-align: middle;
+    height: 14px;
+    width: 100px !important;
+    padding: 3px;
+}
+
+.clsMsg {
+    color: White;
+    font-family: Latinotype_Texta_Medium;
+    font-size: 12px;
+    vertical-align: top;
+    text-align: center;
+    font-weight: bold;
+}
+
+.clsFondoMenuSec {
+    background-image: url(./imagenes/fondo-link-web.jpg);
+}

@@ -1,0 +1,30 @@
+﻿section.home-links { width: 1170px; margin: 0 auto; display: flex; flex-flow: row wrap; }
+  section.home-links > .link { width: 16.66%; box-sizing: border-box; padding: 5px; display: inline-block; }
+    section.home-links > .link > a,
+    section.home-links > .link > a:visited { background-color: #ECEDEF; display: block; text-align: center; padding: 20px; color: #1C256A; text-decoration: none; text-transform: uppercase; box-sizing: border-box; height: 100%; }
+      section.home-links > .link > a .image { display: block; text-align: center; margin-bottom: 10px; }
+        section.home-links > .link > a .image img { width: 80px; }
+      section.home-links > .link > a:hover { font-weight: bold; }
+
+@media all and (max-width: 1170px) {
+  section.home-links { width:100%; }
+}
+
+@media all and (max-width: 980px) {
+  section.home-links > .link { width: 33.33%; }
+}
+
+@media all and (max-width: 768px) {
+  section.home-links > .link { width: 50%; }
+}
+
+@media all and (max-width: 640px) {
+}
+
+@media all and (max-width: 480px) {
+  section.home-links > .link { width: 100%; }
+}
+
+@media all and (max-width: 400px) {
+}
+      
